@@ -34,7 +34,7 @@ t.end()
 Most of the methods that print output can be quieted by setting the optional paramater ```quiet=True```. See source code for more complete documentation.
 
 Python shell example:
-```
+```python
 >>> from stopwatch import Stopwatch
 >>> t = Stopwatch()
 >>> t.start()
