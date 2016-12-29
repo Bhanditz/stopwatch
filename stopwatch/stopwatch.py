@@ -35,9 +35,11 @@ class Stopwatch():
 		""" Starts a new timer. Time is measured as late as possible
 		to prevent overhead from being included.
 		"""
+		if not name:
+			name = self.generic()
 		if 'Total' not in self.names:
+			self.names.append('Total')
 			self.times['Total'] = [time()]
-		if not name: name = self.generic()
 		self.names.append(name)
 		self.times[name] = [time()]
 
