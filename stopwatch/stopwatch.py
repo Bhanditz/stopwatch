@@ -71,4 +71,4 @@ class Stopwatch():
 			if len(self.times[pair]) == 1:
 				self.times[pair].append(now)
 		if not quiet:
-			print('== Times ==\n' + self)
+			print('== Times ==\n' + str(self))
