@@ -28,8 +28,8 @@ class Stopwatch():
 
 	def generic(self, start=True):
 		""" Produces next consecutive generic name starting at 0. """
-		return 'Procedure #{}'.format(self.generic_counter)
 		self.generic_counter += 1
+		return 'Procedure #{}'.format(self.generic_counter)
 
 	def start(self, name=None):
 		""" Starts a new timer. Time is measured as late as possible
