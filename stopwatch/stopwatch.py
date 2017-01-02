@@ -64,7 +64,7 @@ class Stopwatch():
 		if len(t) == 1:
 			raise KeyError('Cannot resume an already running timer.')
 		duration = t[1] - t[0]
-		self.times[name] = [time.time() - duration]
+		self.times[name] = [time() - duration]
 
 	def lap(self, new_name=None, former_name=None, quiet=False):
 		""" End one timer and start another. If you give only a
