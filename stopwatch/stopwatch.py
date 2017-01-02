@@ -55,6 +55,17 @@ class Stopwatch():
 		if not quiet:
 			print('{}: {:.2g} s'.format(name, segment))
 
+	def resume(self, name=None):
+		""" Resumes a stopped timer. Original start and stop
+		information is sacrificed, but the original duration
+		is kept and added to.
+		"""
+		t = self.times[name]
+		if len(t) == 1:
+			raise KeyError('Cannot resume an already running timer.')
+		duration = t[1] - t[0]
+		self.times[name] = [time.time() - duration]
+
 	def lap(self, new_name=None, former_name=None, quiet=False):
 		""" End one timer and start another. If you give only a
 		single argument, that is the name for the NEW timer,
