@@ -16,8 +16,7 @@ class Stopwatch():
 
 	def __str__(self):
 		""" eg. Procedure #3: 1.2 s """
-		sl = self.str_list()
-		return '\n'.join([t[0] + ': ' + t[1] for t in sl])
+		return '\n'.join([t[0] + ': ' + t[1] for t in self.str_list()])
 
 	def str_list(self):
 		""" Simplified list of durations instead of start and end times. """
